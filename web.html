@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Musica</title>
+    <link rel="stylesheet" href="ej_style/web.css" />
+    <script src="script/main.js" type="text/javascript" defer></script>
+    
+</head>
+<body onload = actualizarWeb()>
+  
+  <div id ="verTodas"></div>
+  <div id = "divfotoperfil">
+  
+</div>
+  <section id = "sign">
+    <a id ="signs"  href = "inicio.html"  onclick=sign()> SIGN IN  </a>
+    <a id ="signs"  href = "registro.html" target="_blank"> SIGN UP   </a>
+  </section>
+<section class = "cabecera">
+    <img class= "logol" src="ej_images/icono.jpg" alt="fallo" width="60" height="60">
+    <h1  class = "titulo">PLAYMUSIC</h1>
+    
+</section>
+<div id="modal">
+  <h3>¿Estás seguro que deseas cerrar sesión?</h3>
+
+  <a  id = "cerrarses" href = "#"  onclick = cerrarsesion() style="color: black;" > Cerrar sesion</a>
+
+  <a   id = "nocerrarses" href = "#" onclick = nocerrar() style="color: black;"> No cerrar sesion </a>
+</div>
+<div id = "footer">LA MEJOR MUSICA</div>
+<div class="boton-menu">
+  <label class = "label" for="boton-menu" id = "label" onclick = taparLanzamientos()>☰</label>
+</div>
+<input type="checkbox" id="boton-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<div>
+			<a href="web.html">☰Inicio</a>
+			<a href="#">☰Suscripción</a>
+			<a href="#" onclick = dirigirSoloPlaylist()>☰Playlists</a>
+			<a href="#">☰Ajustes</a>
+      <br>
+			<a href="#">Politica de privacidad</a>
+			<a href="#">Cookies</a>
+    </div>
+    <br>
+    <br>
+    
+    <br>
+    
+		<label for="boton-menu" onclick="mostrarLanzamientos()">✖️</label>
+	</div>
+</div>
+<br>
+<div id = "menu-derecha">
+  <div>
+    <div id="boton-derecha" onclick = menuCerrar()>✖️</div>
+    <br>
+    <a href="cuenta.html" class = "apartado">Cuenta</a>
+    <br>
+    <br>
+    <br>
+    <a href="perfil.html" class = "apartado" onclick = cookiePerfil()>Perfil</a>
+    <br>
+   
+    <br>
+    <br>
+    <a href="#" class = "apartado" onclick=mensajeModal()>Cerrar sesion</a>
+    <br>
+    
+  </div>
+  <br>
+  <br>
+  
+  <br>
+  
+  
+</div>
+
+<div id="buscador">
+  <p> Búsqueda de música: 
+    <input type="search" id = "busca" name="busquedamusica" placeholder="Nombre de la canción" list = "lista">
+    <input type="submit" id = "botonbuscar" value="Buscar" onclick = buscarCancion()>
+  </p>
+
+</div>
+
+<datalist id = "lista"> 
+<option value = "hey"></option>
+<option value = "en que estrella estara"></option>
+<option value = "break your heart"></option>
+<option value = "payphone"></option>
+<option value = "soldadito marinero"></option>
+<option value = "givenchy"></option>
+<option value = "moonlight"></option>
+<option value = "danza kuduro"></option>
+<option value = "this is the life"></option>
+<option value = "thriller"></option>
+
+</datalist>
+<div id = "resultados">
+  <button type="reset" onclick=location.reload()>Volver a la pagina inicial</button>
+  <h1>Resultados de búsqueda</h1>
+  
+</div>
+
+<div class = "container">
+  <h1 >Canciones Del Momento</h1>
+<div id = "sub-container">
+    <div class = "cancion" >
+      <div>
+        <img id = pause5 src="ej_images/pause.png" alt="fallo" width="100" height="100" onclick = stop()>
+        <img onclick=musica6() class= "imagen" id = "imagen6" src="ej_images/imagin.jpg"  alt="fallo" width="100" height="100">
+        <img id = "corazon"  src="ej_images/61046.png"  alt="fallo" width="10" height="10" onclick="megusta1()" >
+      </div>
+         
+        
+    <div class = "description">  
+        <audio controls id ="audio1">
+        <source src="ej_images/hey.mp3" type="audio/mpeg">
+        </audio>
+        Imagine dragons - Hey</div>
+        
+    </div>
+    <div class = "cancion" >
+      <div >
+        <img id = pause6 src="ej_images/pause.png" alt="fallo" width="100" height="100" onclick = stop()>
+        <img onclick=musica7() class= "imagen" id = "imagen7" src="ej_images/estrellafoto.jpg"  alt="fallo" width="100" height="100">
+        <img id = "corazon"  src="ej_images/61046.png"  alt="fallo" width="10" height="10" onclick="megusta2()" >
+      </div>
+         
+        
+      <div class = "description">  
+        <audio controls id ="audio2">
+        <source src="ej_images/estrella.mp3" type="audio/mpeg">
+        </audio>
+        Nena Daconte - En que Estrella estará</div>
+    </div>
+    <div class = "cancion" >
+      <div >
+        <img id = pause7 src="ej_images/pause.png" alt="fallo" width="100" height="100" onclick = stop()>
+        <img onclick=musica8() class= "imagen" id = "imagen8" src="ej_images/heart.jpg"  alt="fallo" width="100" height="100">
+        <img id = "corazon"  src="ej_images/61046.png"  alt="fallo" width="10" height="10" onclick="megusta3()" >
+      </div>
+         
+        
+      <div class = "description">  
+        <audio controls id ="audio3">
+        <source src="ej_images/breakmusica.mp3" type="audio/mpeg">
+        </audio>
+        Taio Cruz - Break Your Heart</div>
+    </div>
+    <div class = "cancion" >
+      <div >
+        <img id = pause8 src="ej_images/pause.png" alt="fallo" width="100" height="100" onclick = stop()>
+        <img onclick=musica9() class= "imagen" id = "imagen9" src="ej_images/payphone.jpg"  alt="fallo" width="100" height="100">
+        <img id = "corazon"  src="ej_images/61046.png"  alt="fallo" width="10" height="10" onclick="megusta4()" >
+      </div>
+         
+        
+      <div class = "description">  
+        <audio controls id ="audio4">
+        <source src="ej_images/payphonemusica.mp3" type="audio/mpeg">
+        </audio>
+        Maroon 5 - Payphone</div>
+    </div>
+    <div class = "cancion" >
+      <div >
+        <img id = pause9 src="ej_images/pause.png" alt="fallo" width="100" height="100" onclick = stop()>
+        <img onclick=musica10() class= "imagen" id = "imagen10" src="ej_images/fito.jpg"  alt="fallo" width="100" height="100">
+        <img id = "corazon"  src="ej_images/61046.png"  alt="fallo" width="10" height="10" onclick="megusta5()" >
+      </div>
+         
+        
+      <div class = "description">  
+        <audio controls id ="audio5">
+        <source src="ej_images/soldadito.mp3" type="audio/mpeg">
+        </audio>
+        Fito y Fitipaldis - Soldadito Marinero</div>
+  </div>
+</div>
+
+  <h1>Canciones mas escuchadas a nivel nacional</h1>
+  <div id = "sub-container">
+    <div class = "cancion" >
+      <div>
+        <img id = pause10 src="ej_images/pause.png" alt="fallo" width="100" height="100" onclick = stop()>
+        <img onclick=musica11() class= "imagen" id = "imagen11" src="ej_images/givenchyfoto.jpg"  alt="fallo" width="100" height="100">
+        <img id = "corazon"  src="ej_images/61046.png"  alt="fallo" width="10" height="10" onclick="megusta6()" >
+      </div>
+         
+        
+      <div class = "description">  
+        <audio controls id ="audio6">
+        <source src="ej_images/givenchy.mp3" type="audio/mpeg">
+        </audio>
+        Duki - Givenchy</div>
+    </div>
+    <div class = "cancion" >
+      <div >
+        <img id = pause11 src="ej_images/pause.png" alt="fallo" width="100" height="100" onclick = stop()>
+        <img onclick=musica12() class= "imagen" id = "imagen12" src="ej_images/x.jpg"  alt="fallo" width="100" height="100">
+        <img id = "corazon"  src="ej_images/61046.png"  alt="fallo" width="10" height="10" onclick="megusta7()" >
+      </div>
+         
+        
+      <div class = "description">  
+        <audio controls id ="audio7">
+        <source src="ej_images/moonlight.mp3" type="audio/mpeg">
+        </audio>
+        XXXTENTACION - Moonlight</div>
+    </div>
+    <div class = "cancion" >
+      <div >
+        <img id = pause12 src="ej_images/pause.png" alt="fallo" width="100" height="100" onclick = stop()>
+        <img onclick=musica13() class= "imagen" id = "imagen13" src="ej_images/danza.jpg"  alt="fallo" width="100" height="100">
+        <img id = "corazon"  src="ej_images/61046.png"  alt="fallo" width="10" height="10" onclick="megusta8()" >
+      </div>
+         
+        
+      <div class = "description">  
+        <audio controls id ="audio8">
+        <source src="ej_images/danza.mp3" type="audio/mpeg">
+        </audio>
+        Don Omar - Danza Kuduro</div>
+    </div>
+    <div class = "cancion" >
+      <div >
+        <img id = pause13 src="ej_images/pause.png" alt="fallo" width="100" height="100" onclick = stop()>
+        <img onclick=musica14() class= "imagen" id = "imagen14" src="ej_images/thisisthelife.jpg"  alt="fallo" width="100" height="100">
+        <img id = "corazon"  src="ej_images/61046.png"  alt="fallo" width="10" height="10" onclick="megusta9()" >
+      </div>
+         
+        
+      <div class = "description">  
+        <audio controls id ="audio9">
+        <source src="ej_images/life.mp3" type="audio/mpeg">
+        </audio>
+        Amy Macdonald - This Is The Life</div>
+    </div>
+    <div class = "cancion" >
+      <div >
+        <img id = pause14 src="ej_images/pause.png" alt="fallo" width="100" height="100" onclick = stop()>
+        <img onclick=musica15() class= "imagen" id = "imagen15" src="ej_images/thrillerfoto.jpg"  alt="fallo" width="100" height="100">
+        <img id = "corazon"  src="ej_images/61046.png"  alt="fallo" width="10" height="10" onclick="megusta10()" >
+      </div>
+         
+        
+      <div class = "description">  
+        <audio controls id ="audio10">
+        <source src="ej_images/thriller.mp3" type="audio/mpeg">
+        </audio>
+      Michael Jackson - Thriller</div>
+  </div>
+</div>
+
+
+<h1>Artistas del Momento</h1>
+<div id = "sub-container">
+  <div class = "cancion" >
+    <div>
+      <img class= "imagen" id = "imagen11" src="ej_images/omarartista.jpg" alt="fallo" width="100" height="100">
+    </div>
+      <div class = "descriptionArtist" onclick = "goArtista('DON OMAR')">Don Omar</div>
+  </div>
+  <div class = "cancion" >
+    <div>
+      <img class= "imagen" id = "imagen12" src="ej_images/xfoto.jpg" alt="fallo" width="100" height="100">
+    </div>
+      <div class = "descriptionArtist" onclick = "goArtista('XXXTENTACION')">XXXTENTACION</div>
+  </div>
+  <div class = "cancion" >
+    <div>
+      <img class= "imagen" id = "imagen13" src="ej_images/maroonartista.jpg" alt="fallo" width="100" height="100">
+    </div>
+      <div class = "descriptionArtist"onclick = "goArtista('MAROON 5')">Maroon 5</div>
+  </div>
+  <div class = "cancion" >
+    <div>
+      <img class= "imagen" id = "imagen14" src="ej_images/michaelfoto.jpg" alt="fallo" width="100" height="100">
+    </div>
+      <div class = "descriptionArtist" onclick = "goArtista('MICHAEL JACKSON')" >Michael Jackson</div>
+  </div>
+  <div class = "cancion" >
+    <div>
+      <img class= "imagen" id = "imagen15" src="ej_images/dukifoto.jpg" alt="fallo" width="100" height="100">
+    </div>
+  <div class = "descriptionArtist" onclick = "goArtista('DUKI')">Duki</div>
+</div>
+</div>
+<div id="lanzamientos">
+  <h1>Nuevos lanzamientos</h1>
+  <div id = "sub-container">
+    <div class = "cancion">
+      <div>
+        <img class= "imagen" src="ej_images/walk.jpg" alt="fallo" width="100" height="100">
+      </div>
+      <div class = "contador">
+      <p><span id="days"></span> días / <span id="hours"></span> horas / <span id="minutes"></span> minutos / <span id="seconds"></span> segundos
+      </p>
+      </div>
+    </div>
+    <div class = "cancion">
+      <div>
+        <img class= "imagen" src="ej_images/only.jpg" alt="fallo" width="100" height="100">
+      </div>
+      <div class = "contador">
+      <p><span id="days2"></span> días / <span id="hours2"></span> horas / <span id="minutes2"></span> minutos / <span id="seconds2"></span> segundos
+      </p>
+      </div>
+    </div>
+    <div class = "cancion">
+      <div>
+        <img class= "imagen" src="ej_images/caminando.jpg" alt="fallo" width="100" height="100">
+      </div>
+      <div class = "contador">
+      <p><span id="days3"></span> días / <span id="hours3"></span> horas / <span id="minutes3"></span> minutos / <span id="seconds3"></span> segundos
+      </p>
+      </div>
+    </div>
+    <div class = "cancion">
+      <div>
+        <img class= "imagen" src="ej_images/eye.jpg" alt="fallo" width="100" height="100">
+      </div>
+      <div class = "contador">
+      <p><span id="days4"></span> días / <span id="hours4"></span> horas / <span id="minutes4"></span> minutos / <span id="seconds4"></span> segundos
+      </p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+
+
+
+
+</html>

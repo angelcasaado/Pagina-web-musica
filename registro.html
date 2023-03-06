@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Registro de sesion</title>
+    <link rel="stylesheet" href="ej_style/registro.css" />
+    <script src="script/main.js" type="text/javascript" defer></script>
+    
+</head>
+
+<div id = "container" >
+<h1>Registro</h1>
+<h3>Información de la cuenta</h3>
+<input type="text" placeholder="Username" name="Username" id ="name">
+<br>
+<input type="Password" placeholder="Password" name="Password" id = "password">
+<br>
+<h3>Información personal</h3>
+<input type="text" placeholder="Name" name="Name" id = "name2">
+<br>
+<input type="text" placeholder="Surnames" name="Surnames" id = "surnames">
+<br>
+<input type="email" placeholder="Email" name="Email" id = "email" pattern="[a-z]+[0-9]*[@][a-z]+[.][a-z]+">
+<br>
+<input type="file" placeholder="Nombre de la foto" name="Name" id = "foto">
+<br>
+<input type="date" placeholder="Birthdate" name="Birthdate" id = "birthdate">
+<br>
+
+<br>
+<label id = "_checkbox"><input type="checkbox" id="micheckbox" value="checkbox"> He leído y acepto las Condiciones de uso </label>
+<br>
+
+<img class= "googlelogo" src="ej_images/google.png" alt="fallo" width="50" height="50">
+<img class= "facebooklogo" src="ej_images/facebook.png" alt="fallo" width="50" height="50">
+
+<br>
+<button type="submit" onclick=final()>Registro</button>
+
+<button type="reset" onclick=borrar()>Clear all fields</button>
+
+
+
+</div>
+</body>
